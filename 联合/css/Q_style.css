@@ -1,0 +1,136 @@
+/*css Reset*/
+body,h1,h2,h3,h4,h5,h6,hr,p,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{
+    margin:0;
+    padding:0;
+    text-align: left;
+    font-size: 14px;
+    font-weight:normal;
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+img{border:0 none;vertical-align:middle;}
+button,input,select,textarea{font-size:100%;overflow:visible;}
+table{border-collapse:collapse;border-spacing:0;}
+li{list-style: none;}
+em{font-style: normal;}
+a:hover{text-decoration: none;cursor:pointer;}
+body{font-family: "Microsoft YaHei",'宋体', Helvetica, sans-serif,simsun ,'黑体'; font-size: 14px; color:#333; background: #fff;}
+/*************我的账户*************/
+.account_box{width:1000px;margin:auto;border:1px solid #dedede;overflow:hidden;padding:39px 53px;}
+.account_box .account_left{float:left;border:1px solid #dedede;width:362px;}
+.account_box .account_left .account_top{margin:0px 25px;overflow:hidden;border-bottom:1px solid #dedede;padding:15px 0px;}
+.account_box .account_left .account_top h3{font-size:20px;color:#666;float:left;}
+.account_box .account_left .account_top span{float:right;display:block;padding-top:8px;}
+.account_box .account_left .account_top span a{display:inline-block;color:#e86714;}
+.account_box .account_left .account_top span em{display:inline-block;}
+.account_box .account_left .account_btm{margin:50px 25px;}
+.account_box .account_left .account_btm dl{overflow:hidden;margin-top:15px;}
+.account_box .account_left .account_btm dl dt{float:left;line-height:32px;width:58px;text-align:right;}
+.account_box .account_left .account_btm dl dd{float:left;border:1px solid #dedede;height:30px;background:url(../pic/name_icon.png) 10px center no-repeat;width:176px;}
+.account_box .account_left .account_btm dl dd input[type="text"]{float:left;width:138px;height:30px;line-height:30px;border:0;border-left:1px solid #dedede;margin-left:37px;}
+.account_box .account_left .account_btm .psw_icon{background:url(../pic/psw_icon.png) 10px center no-repeat;}
+.account_box .account_left .account_btm ul{overflow:hidden;margin-top:15px;}
+.account_box .account_left .account_btm ul li{float:left;height:32px;line-height:32px;}
+.account_box .account_left .account_btm ul li input[type="text"]{float:left;width:60px;height:30px;line-height:30px;border:0;border:1px solid #dedede;margin-left:2px;margin-right:5px;}
+.account_box .account_left .account_btm ul li img{margin-right:5px;}
+.account_box .account_left .account_btm input[type="button"]{width:314px;height:44px;background:url(../pic/login_btn.png);border:0;margin-top:30px;}
+.account_right{float:right;margin-right:50px;margin-top:60px;}
+.account_right .focus{width:350px;height:230px;float:left;position:relative;}
+.account_right .focus #pics{width:198px;height:230px;overflow:hidden;margin:auto;}
+.account_right .focus #pics ul{width:4216px;height:340px;float:left;}
+.account_right .focus #pics li{width:350px;height:230px;float:left;}
+.account_right .focus #pics li img{float:left;}
+.account_right .focus #tip{width:96px;height:14px;position:absolute;left:40%;margin:-17px 0 0;z-index:13;}
+.account_right .focus #tip ul li{width:14px;height:14px;float:left;display:inline;margin:0 5px;cursor:pointer;background:url(images/focus_tip.png) no-repeat;}
+.account_right .focus #tip ul li.current{background:url(images/focus_tip_current.png) no-repeat;}
+.account_right .focus .btn{width:42px;height:30px;overflow:hidden;}
+.account_right .account_right .focus .btn ul{width:100%;float:left;}
+.account_right .focus .btn li{width:7px;height:9px;float:left;display:inline;margin:0 7px;cursor:pointer;overflow:hidden;}
+.account_right .focus .btn li.btn-left{background:url(../pic/prev.png) no-repeat left top;width:18px;height:30px;position:absolute;left:0px;top:100px;z-index:99;}
+.account_right .focus .btn li.btn-right{background:url(../pic/next.png) no-repeat left top;width:18px;height:30px;position:absolute;right:0px;top:100px;z-index:99;}
+.account_right .focus .show{display:block!important;}
+/*************债权转让 产品说明*********/
+.instructions_box{width:1000px;margin:auto;}
+.instructions_box .instructions_1 h3{border-bottom:1px dashed #794617;font-size:20px;color:#794617;padding:15px 0px;}
+.instructions_box .instructions_1 table tr td p{font-size:14px;color:#666;line-height:26px;padding-right:150px;text-indent:30px;}
+.instructions_box .instructions_1 table tr td img{margin-top:50px;}
+.instructions_box .instructions_2 table tr td p{padding-right:0px;padding-left:250px;text-indent:0;}
+.instructions_box .instructions_1 .zq_what{font-size:14px;color:#666;line-height:26px;}
+
+/*************宣传推广*********/
+.propaganda_box .propaganda_1{background:url(../pic/xc_banner.png) center no-repeat;height:478px;position:relative;}
+.propaganda_box .propaganda_1 a{display:block;width:246px;height:66px;top:320px;left:50%;position:absolute;margin-left:-123px;}
+.propaganda_box .propaganda_2{height:194px;width:100%;text-align:center;background:#d22b3f;}
+.propaganda_box .propaganda_2 img{margin-top:10px;}
+.propaganda_box .propaganda_3{background:#fbc40f;padding:80px 0px;}
+.propaganda_box .propaganda_3 .propaganda_3_box{width:980px;margin:auto;border-radius:5px;border:1px dotted #140f01;padding-bottom:20px;}
+.propaganda_box .propaganda_3 .propaganda_3_box h3{width:198px;height:47px;background:#000;font-size:24px;color:#fbc40f;text-align:center;line-height:47px;margin:20px;}
+.propaganda_box .propaganda_3 .propaganda_3_box h4{font-size:24px;color:#d22b3f;margin-left:20px;}
+.propaganda_box .propaganda_3 .propaganda_3_box p{font-size:16px;color:#000;margin-left:20px;line-height:30px;font-weight:bold;}
+/*************微贷保*********/
+.instructions_box .instructions_4 table tr td p{text-indent:0px;}
+/*************使用帮助*********/
+.help_box{width:100%;}
+.help_box .help_banner{height:198px;background:url(../pic/help.png) center no-repeat;}
+.help_box .help_btm{margin:10px auto 30px auto;width:1000px;min-height:800px;}
+.help_box .help_btm .help_left{float:left;width:178px;background:#efefef;min-height:802px;}
+.help_box .help_btm .help_left ul li{height:50px;line-height:50px;border-bottom:1px solid #ebecec;font-size:16px;color:#ff8434;text-indent:20px;background:#fff;}
+.help_box .help_btm .help_left ul .help_bg{background:#ff8434;color:#fff;}
+.help_box .help_btm .help_right{float:right;border:1px solid #cfcdcd;width:820px;min-height:800px;}
+.help_box .help_btm .help_right h3{font-size:24px;color:#666;border-bottom:3px solid #e6e6e6;padding:25px 0px 12px 0px;margin:0px 30px;}
+.help_box .help_btm .help_right h4{font-size:18px;color:#000;margin:25px 30px 0px 30px;}
+.help_box .help_btm .help_right .zc_box{margin:0px 30px;border-bottom:1px dashed #e6e6e6;padding-bottom:25px;}
+.help_box .help_btm .help_right .zc_box h5{font-size:16px;color:#000;margin-top:25px;background:url(../pic/over.png) left center no-repeat;text-indent:25px;}
+.help_box .help_btm .help_right .zc_box p{font-size:14px;color:#666;margin-top:15px;padding-left:25px;}
+.help_box .help_btm .help_right table{width:760px;}
+.help_box .help_btm .help_right table tr td{text-align:center;padding-top:30px;}
+/***************产品模式*************/
+.instructions_box .instructions_1 table tr td .info_l{display:block;width:216px;height:41px;border:2px solid #e4e4e4;text-align:center;line-height:41px;font-size:16px;color:#666;margin-top:40px;}
+.instructions_box .instructions_1 h4{font-size:18px;font-weight:bold;color:#666;margin-top:30px;padding-bottom:10px;}
+.fk_banner{background:url(../pic/fk_banner.png) center no-repeat;height:247px;position:relative;}
+.fk_banner p{width:568px;height:126px;color:#fff;position:absolute;font-size:14px;left:50%;margin-left:-474px;top:60px;line-height:30px;}
+.fk_banner span{font-size:18px;}
+.instructions_box .instructions_1 table tr td .info_x{margin:0px;border:0px;height:15px;font-size:14px;color:#794617;text-align:right;line-height:15px;display:block;width:97%;}
+
+/**********翰沃商城贷***********/
+.account_right .focus_1{width:386px;height:260px;float:left;position:relative;border:2px solid #d3ae8b}
+.account_right .focus .hw_tu{width:247px;height:230px;overflow:hidden;margin:auto;}
+.account_right .focus .btn li.btn-left-1{background:url(../pic/h_prev.png) no-repeat left top;width:26px;height:42px;position:absolute;left:15px;top:108px;z-index:99;}
+.account_right .focus .btn li.btn-right-1{background:url(../pic/h_next.png) no-repeat left top;width:26px;height:42px;position:absolute;right:15px;top:108px;z-index:99;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

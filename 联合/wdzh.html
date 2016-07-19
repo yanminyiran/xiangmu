@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>联合金融我要投资</title>
+	<link rel="stylesheet" href="css/Q_style.css" />
+</head>
+<body>
+<div class="account_box">
+	<div class="account_left">
+		<div class="account_top">
+			<h3>用户登录</h3>
+			<span>
+				<a href="">免费注册</a>
+				<em>|</em>
+				<a href="">忘记密码？</a>
+			</span>
+		</div>
+		<div class="account_btm">
+			<dl>
+				<dt>用户名：</dt>
+				<dd><input type="text"></dd>
+			</dl>
+			<dl>
+				<dt>密码：</dt>
+				<dd class="psw_icon"><input type="text"></dd>
+			</dl>
+			<ul>
+				<li>验证码：</li>
+				<li><input type="text"></li>
+				<li><img src="pic/yzm.png"></li>
+				<li>刷新</li>
+			</ul>
+			<input type="button" value="">
+		</div>
+	</div>
+	<div class="account_right">
+		<div class="focus">
+			<div id="pics">
+				<ul>
+					<li><a href=""><img alt="" src="pic/s1.png" /></a></li>
+					<li><a href=""><img alt="" src="pic/s1.png" /></a></li>
+					<li><a href=""><img alt="" src="pic/s1.png" /></a></li>
+					<li><a href=""><img alt="" src="pic/s1.png" /></a></li>
+				</ul>
+			</div>
+			<div id="tip" style="display:none;">
+				<ul>
+					<li id="smallimg_1" onclick="change(1)" class="current"></li>
+					<li id="smallimg_2" onclick="change(2)"></li>
+					<li id="smallimg_3" onclick="change(3)"></li>
+					<li id="smallimg_4" onclick="change(4)"></li>
+				</ul>
+			</div>
+			<div class="btn">
+				<ul>
+					<li class="btn-left" id="focus_btn_left" onclick="focus_prev();"></li>
+					<li class="btn-right" id="focus_btn_right" onclick="focus_next();"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+var isround = "";
+var scrollmove = "";
+var masktime = 10;
+var focus_cur = 1;
+var p = document.getElementById("pics").getElementsByTagName("li");
+var h = document.getElementById("tip").getElementsByTagName("li");
+function change(id){
+	clearTimeout(isround);
+	clearInterval(scrollmove);
+	for (var i = 1; i <= h.length; i++) {
+		if(i == id){
+			document.getElementById("smallimg_"+i).className="current";
+		}else{
+			document.getElementById("smallimg_"+i).className="";
+		}
+	}
+	if ((next = id + 1) > h.length){
+		next = 1;
+	}
+	isround = setTimeout("change("+next+")",8000);
+	scrollmove = setInterval("scrollMove("+id+")",masktime);
+	focus_cur = id;
+}
+function scrollMove(m){
+	var srl = document.getElementById("pics").scrollLeft;
+	var dsrl = Math.floor((p[0].clientWidth*(m-1)-srl)/5);
+	var xsrl = Math.ceil((p[0].clientWidth*(m-1)-srl)/5);
+	if(srl > p[0].clientWidth*(m-1)){
+		document.getElementById("pics").scrollLeft = srl + dsrl;
+	}else if(srl < p[0].clientWidth*(m-1)){
+		document.getElementById("pics").scrollLeft = srl + xsrl;
+	}else{
+		clearInterval(scrollmove);
+	}
+}
+function focus_prev(){
+	var prev = (focus_cur+3)%4;
+	if(prev == "0"){
+		prev = 4;
+	}
+	change(prev);
+}
+function focus_next(){
+	var next = (focus_cur+1)%4;
+	if(next == "0"){
+		next = 4;
+	}
+	change(next);
+}
+isround = setTimeout("change(2)",8000);
+</script>
+</body>
+</html>
